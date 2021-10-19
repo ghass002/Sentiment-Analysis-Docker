@@ -9,17 +9,17 @@ FROM python:3.10.0-alpine3.14
 ``
 
 2. Install rust and cargo dependencies for build
-    `` bash
+    `` 
  RUN apk add rust cargo
   ``
   
 3. install germansentiment pakage
-``bash
+``
 RUN pip3 install germansentiment
 ``
 
 4. add the script to the image on the root directory
-``bash
+``
 ADD app.py /app.py
 ``
 
@@ -29,13 +29,13 @@ ENTRYPOINT ["python3", "/app.py"]
 ``
 
 6. build the image
-``bash
+``
 docker build . --tag laajailia_image:v1.0
 ``
 
 ## how to use the endpoint
 
-``bash
+``
 docker run --rm laajailia_image:v1.0 texts``
 texts: list of strings.
 
