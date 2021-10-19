@@ -4,7 +4,7 @@ Encapsulation of a sentiment analysis model as a microservice in Docker
 
   
 1. Our docker image is based on alpine distribution with python 3.10 and pip
-``bash
+``
 FROM python:3.10.0-alpine3.14
 ``
 
